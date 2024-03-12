@@ -1,0 +1,86 @@
+                                      employee
+import java.util.*;
+class Employee
+{
+	int eNo,eSalary;
+	String eName;
+	Employee(String a,int b,int c)
+{
+	eName=a;
+	eNo=b;
+	eSalary=c;
+	}
+	int return_id()
+	{
+	return eNo;
+	}
+}
+class Company
+{
+	public static void main(String args[])
+	{
+	Scanner s=new Scanner(System.in);
+	Employee E[]=new Employee[5];
+	int n,id,salary;
+	String namel;
+	System.out.println("Enter number of employees");
+	n=s.nextInt();
+	s.nextLine();
+	for(int i=0;i<n;i++)
+	{
+	System.out.println("Enter the employee details");
+	System.out.println("Enter the employee id");
+	id=s.nextInt();
+	s.nextLine();
+	System.out.println("Enter the employee Name");
+	namel=s.nextLine();
+	System.out.println("Enter the employee Salary");
+	salary=s.nextInt();
+	s.nextLine();
+	E[i]=new Employee(namel,id,salary);
+	}
+	System.out.println("Enter Id of employees to be searched");
+	int ele=s.nextInt();
+	int h,f=0;
+	for(int i=0;i<n;i++)
+	{
+	h=E[i].return_id();
+	if(ele==h)
+	{
+		f=f+1;
+	}
+	}
+	if(f>0)
+	{
+	System.out.println("The Employee having the id"+ele+"is present");
+	}
+	else
+	{
+	System.out.println("The Employee havingthe id"+ele+"is not present");
+	}
+	}
+}
+
+                                             palindrme
+
+ class palindrome
+ {
+ public static void main(String args[])
+ {
+ String str=args[0];
+ String rev="";
+ int len=str.length();
+ for(int i=len-1;i>=0;i--)
+ {
+ rev=rev+str.charAt(i);
+ }
+ if(rev.toLowerCase().equals(str.toLowerCase()))
+ {
+ 	System.out.println("The string is palindrome");
+ }
+ else{
+ 	System.out.println("The string is not palindrome");
+ }
+ }
+ }
+
